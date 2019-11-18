@@ -1,0 +1,87 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="mbox_run" id="t}~DqmBN8wXQsIt:Uz4w" x="-250" y="-490">
+    <statement name="run">
+      <block type="mbox_vars_int_set" id="{?~s]z+?#u$O4}$x!;c;">
+        <value name="CONTENT">
+          <block type="mbox_sense_light" id="PX]T}5Qx2^^vu321IiG6"></block>
+        </value>
+        <next>
+          <block type="controls_if" id="R=wKn3cWOn}zEcr=s6,~">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="m_VXAn=ZGQ4pl6U$GY#P">
+                <field name="OP">LTE</field>
+                <value name="A">
+                  <block type="mbox_vars_int_get" id="PPQQm4J3W/Bm6e($N-wV"></block>
+                </value>
+                <value name="B">
+                  <block type="math_number" id="zy!iECgZQx:]rI$3Eh5r">
+                    <field name="NUM">30</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="mbox_rgb_led" id="*s[DlXfNK,BKd=#Je{o2">
+                <field name="R">200</field>
+                <field name="G">0</field>
+                <field name="B">0</field>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_operation" id="73Q/5fDNld2HDcI1,:*;">
+                <field name="OP">AND</field>
+                <value name="A">
+                  <block type="logic_compare" id="3t[c]1@PL[#Q1#JqzQQ~">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                      <block type="mbox_vars_int_get" id="dg.|xX^OFz7xWfE7qq8u"></block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="t}vI$BH40d1/G`Tb`PQ_">
+                        <field name="NUM">30</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_compare" id="T+9ZAk4[c/tHvwjwx|q]">
+                    <field name="OP">LTE</field>
+                    <value name="A">
+                      <block type="mbox_vars_int_get" id="Yr|0-dP;]OMLWAFa$!my"></block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="n5C9P0vNEMhL8JR?U*:1">
+                        <field name="NUM">65</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="mbox_rgb_led" id="y-T]-VRh7=7vNZfv)W~)">
+                <field name="R">0</field>
+                <field name="G">200</field>
+                <field name="B">0</field>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="mbox_rgb_led" id="_bpf~/M*r$zuU^!/v,c@">
+                <field name="R">0</field>
+                <field name="G">0</field>
+                <field name="B">200</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="mbox_rgb_led" id="|FFQ,okl9citrzfKKpfp" disabled="true" x="-243" y="-341">
+    <field name="R">125</field>
+    <field name="G">0</field>
+    <field name="B">0</field>
+  </block>
+</xml>

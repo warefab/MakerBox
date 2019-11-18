@@ -1,0 +1,60 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="mbox_run" id="UK(Dpr-(wY{X4[4Z%E[%" x="-190" y="-169">
+    <statement name="run">
+      <block type="mbox_comment" id="(%CR.@!h+y-PKPzXHn}e">
+        <field name="CMT">this code requires seven segment extension module</field>
+        <next>
+          <block type="mbox_2_segment" id="/g,W0Saj461lEbkh-Nee">
+            <field name="MODE">3</field>
+            <value name="VAL">
+              <shadow type="math_number" id="FbRWyuvD-XL4@@A)-!~u">
+                <field name="NUM">0</field>
+              </shadow>
+              <block type="mbox_sense_light" id="?d}M^R%!a1%BO`]:$Kcn"></block>
+            </value>
+            <next>
+              <block type="controls_if" id=".;vdDh$W~Cs1Ljsksxji">
+                <mutation else="1"></mutation>
+                <value name="IF0">
+                  <block type="logic_compare" id="ugCed3/.hW0}YN-Ho~)x">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="mbox_sense_light" id="Bf%P*)uVKujShf[AQdD8"></block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="h@s{KY~xv;~edhz/P/o#">
+                        <field name="NUM">50</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="arduino_base_inout_digital_write" id="Bz-X3e:@(BW~JFRNA{:H">
+                    <field name="PIN">LED_WHITE</field>
+                    <field name="STAT">ON</field>
+                  </block>
+                </statement>
+                <statement name="ELSE">
+                  <block type="arduino_base_inout_digital_write" id="3`lK_EKw%zQ0}}fgOhn#">
+                    <field name="PIN">LED_WHITE</field>
+                    <field name="STAT">OFF</field>
+                  </block>
+                </statement>
+                <next>
+                  <block type="arduino_base_delay" id="4ezTI0/kty~gFNClIMX`">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="[fCHs5-T6C4i$o[xXKuM">
+                        <field name="NUM">100</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

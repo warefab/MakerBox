@@ -1,0 +1,57 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="mbox_run" id="Y`)^L._m6r~R*dVCxZHe" x="-350" y="-250">
+    <statement name="run">
+      <block type="arduino_base_inout_tone" id="t{DB%qCzsPp!~FJUlmH@">
+        <field name="PIN">BUZZER</field>
+        <value name="NUM">
+          <shadow type="math_number" id="/sUS*1Jts)7`~ZbgH`BL">
+            <field name="NUM">440</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="arduino_base_inout_digital_write" id="i):eGuI/x`Zry2F8B}Vi">
+            <field name="PIN">LED_RED</field>
+            <field name="STAT">ON</field>
+            <next>
+              <block type="mbox_vars_int_set" id="=f/UcoolW=m]S9X?11Eq">
+                <value name="CONTENT">
+                  <block type="mbox_sense_button" id="*$$B{U!@4|}|mYI2LZ,e"></block>
+                </value>
+                <next>
+                  <block type="controls_whileUntil" id="GA_r:W!zr#)LCnt,0Tyd">
+                    <field name="MODE">WHILE</field>
+                    <value name="BOOL">
+                      <block type="logic_compare" id="nwO2Io4`mV{h2kf.LvNq">
+                        <field name="OP">EQ</field>
+                        <value name="A">
+                          <block type="mbox_sense_button" id="wi;Z]NW%II_o-uE5j,L|"></block>
+                        </value>
+                        <value name="B">
+                          <block type="arduino_base_inout_highlow" id="#4KVEF+;5WgOO:fbddz*">
+                            <field name="BOOL">HIGH</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO">
+                      <block type="arduino_base_inout_notone" id="+8o/P2^WXLkkY),Z0e8e">
+                        <field name="PIN">BUZZER</field>
+                        <next>
+                          <block type="arduino_base_inout_digital_write" id="!6RyWXeR$c7O[;m2ADDQ">
+                            <field name="PIN">LED_RED</field>
+                            <field name="STAT">OFF</field>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

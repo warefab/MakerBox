@@ -1,0 +1,44 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="mbox_run" id=":G;#Qx]%LhS0spO8jrUf" x="-510" y="-330">
+    <statement name="run">
+      <block type="controls_if" id="je%||kyLIU:r4~ICZ9~n">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="J*E|v#H(B|OA|Alq*uPw">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="mbox_sense_button" id="vlVxK)lRf:YerGQ_o,#*"></block>
+            </value>
+            <value name="B">
+              <block type="arduino_base_inout_highlow" id="@%NxoKvOGZVmM5[E/*W~">
+                <field name="BOOL">HIGH</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="arduino_base_inout_digital_write" id="1aG+t34F;}K6d*`Px{/5">
+            <field name="PIN">LED_RED</field>
+            <field name="STAT">ON</field>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="arduino_base_inout_digital_write" id="%d-2{kPxGUv~Xg%bCl]g">
+            <field name="PIN">LED_RED</field>
+            <field name="STAT">OFF</field>
+          </block>
+        </statement>
+        <next>
+          <block type="arduino_base_delay" id="a~wO-/Mj4[O]ML/*w:sT">
+            <value name="DELAY_TIME">
+              <shadow type="math_number" id="UZ)eO618VSlhn}$.O_nS">
+                <field name="NUM">50</field>
+              </shadow>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>

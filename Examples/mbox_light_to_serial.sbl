@@ -1,0 +1,22 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="arduino_base_serial_print" id="+iMwQ;/?hlF6vm(j+@Zm" x="-70" y="-10">
+    <value name="CONTENT">
+      <shadow type="text" id="o0ntfZKlaUU_1~;Z2/7f">
+        <field name="TEXT"></field>
+      </shadow>
+      <block type="arduino_base_inout_analog_read" id="$qBlrhA~-^9bL!,Zk*h(">
+        <field name="PIN">LDR</field>
+      </block>
+    </value>
+    <next>
+      <block type="arduino_base_delay" id="SocVX{2?,J/WI#=`I)|a">
+        <value name="DELAY_TIME">
+          <shadow type="math_number" id="vFiEYYx%i/K#r-M5-*$U">
+            <field name="NUM">500</field>
+          </shadow>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>

@@ -1,0 +1,84 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="mbox_setup" id="$~E8[htlY6r4lrPOPWdw" x="-250" y="10">
+    <statement name="setup">
+      <block type="mbox_oled_text" id="#AG0~T/hc$og@jIBHQDX">
+        <field name="XPOS">30</field>
+        <field name="YPOS">25</field>
+        <value name="TXT">
+          <shadow type="text" id="FzXQ}lLZg@d4IIJ$h^hP">
+            <field name="TEXT">MAKERBOX</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="mbox_oled_display" id="n*g|BiRgqCUf(;1,4epi"></block>
+        </next>
+      </block>
+    </statement>
+  </block>
+  <block type="mbox_comment" id="pf1ds6QAl%Lvw6_@R%#U" x="150" y="-10">
+    <field name="CMT">siren example</field>
+    <next>
+      <block type="arduino_base_inout_digital_write" id="$HtS/1uu7*duEyaRW2Z!">
+        <field name="PIN">LED_RED</field>
+        <field name="STAT">ON</field>
+        <next>
+          <block type="arduino_base_inout_digital_write" id="!,6UPmYgtdoI7F%($^O}">
+            <field name="PIN">LED_GREEN</field>
+            <field name="STAT">OFF</field>
+            <next>
+              <block type="arduino_base_inout_tone" id="]mV0=3%Sg9ep7?Aaj7b]">
+                <field name="PIN">BUZZER</field>
+                <value name="NUM">
+                  <shadow type="math_number" id="g9xI]E}#.zA+kqjGxsO$">
+                    <field name="NUM">600</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="arduino_base_delay" id="6e#KsP[jLxaWcDjS|.A@">
+                    <value name="DELAY_TIME">
+                      <shadow type="math_number" id="/7GE`7Bxe`NsSTn]x#08">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="arduino_base_inout_digital_write" id="?3A!4E@YGooTgLIqpg-N">
+                        <field name="PIN">LED_RED</field>
+                        <field name="STAT">OFF</field>
+                        <next>
+                          <block type="arduino_base_inout_digital_write" id="CmtvM}P/Vzf/9P^@TW=a">
+                            <field name="PIN">LED_GREEN</field>
+                            <field name="STAT">ON</field>
+                            <next>
+                              <block type="arduino_base_inout_tone" id="ir}_eADV4]o5-qVMIej0">
+                                <field name="PIN">BUZZER</field>
+                                <value name="NUM">
+                                  <shadow type="math_number" id="b@avD40xoN[Be1:Zr*I*">
+                                    <field name="NUM">400</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="arduino_base_delay" id="y?}~{K`,ku9@smG,zT-u">
+                                    <value name="DELAY_TIME">
+                                      <shadow type="math_number" id=")c*W$m)UVB(-Ef8MNyfw">
+                                        <field name="NUM">1000</field>
+                                      </shadow>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>

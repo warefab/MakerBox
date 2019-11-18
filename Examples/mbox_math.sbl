@@ -1,0 +1,58 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables></variables>
+  <block type="arduino_base_inout_digital_write" id="@GLTH;R3n^aZv=KgaAeW" x="-150" y="-130">
+    <field name="PIN">LED_RED</field>
+    <field name="STAT">ON</field>
+    <next>
+      <block type="arduino_base_delay" id="L80D:Z^buZUS~dpfV3?L">
+        <value name="DELAY_TIME">
+          <shadow type="math_number" id="o~vk4|HMZ!VQ4E:LE,ZM">
+            <field name="NUM">200</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="arduino_base_inout_digital_write" id="+4[]n`3BU*lk%yCP?rZU">
+            <field name="PIN">LED_RED</field>
+            <field name="STAT">OFF</field>
+            <next>
+              <block type="arduino_base_delay" id="dR=3CCoCSjS-})g8D0*1">
+                <value name="DELAY_TIME">
+                  <shadow type="math_number" id="DF`@Fzkdj]0kD7LJ%/12">
+                    <field name="NUM">200</field>
+                  </shadow>
+                </value>
+                <next>
+                  <block type="mbox_oled_text" id="wWTr2{X3gc)QJ,{JDLh*">
+                    <field name="XPOS">0</field>
+                    <field name="YPOS">10</field>
+                    <value name="TXT">
+                      <shadow type="text" id="h/4US+M=$u;DR4#}/ceB">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="math_arithmetic" id="Kqd;]ce2q*FChMm|Z^Lg">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <shadow type="math_number" id="yql?WrO/vAjBj~]X}v,4">
+                            <field name="NUM">56</field>
+                          </shadow>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="];is!zt3f+]7E4g1k:A%">
+                            <field name="NUM">23</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="mbox_oled_display" id="F%Y@;y|jIi*[MfrD)[o-"></block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
